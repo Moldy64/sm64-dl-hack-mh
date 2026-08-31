@@ -1,4 +1,5 @@
--- add more trajectories here
-gBehaviorValues.trajectories.KoopaBobTrajectory = get_trajectory('KoopaBoB_path')
-gBehaviorValues.trajectories.KoopaThiTrajectory = get_trajectory('KoopaTHI_path')
-gBehaviorValues.trajectories.BowlingBallBobTrajectory = get_trajectory('metal_ball_bob_path1')
+gBehaviorValues.trajectories.KoopaBobTrajectory = get_trajectory("bob_seg7_trajectory_koopa")
+gBehaviorValues.trajectories.KoopaThiTrajectory = get_trajectory("thi_seg7_trajectory_koopa")
+gBehaviorValues.trajectories.BowlingBallBobTrajectory = get_trajectory("bob_seg7_metal_ball_path0")
+gBehaviorValues.trajectories.BowlingBallTtmTrajectory = get_trajectory("ttm_seg7_trajectory_070170A0")
+gBehaviorValues.trajectories.BowlingBallBob2Trajectory = get_trajectory("bob_seg7_metal_ball_path1")
