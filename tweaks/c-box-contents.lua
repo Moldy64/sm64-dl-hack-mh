@@ -1,3 +1,11 @@
+-- Force and make this Bhv having a shell like the original.
+--- @param o Object
+local function koopa_with_shell(o)
+    obj_set_model_extended(o, E_MODEL_KOOPA_WITH_SHELL)
+end
+
+id_bhvKoopaWithShell = hook_behavior(id_bhvKoopa, OBJ_LIST_GENACTOR, false, nil, koopa_with_shell, "bhvKoopaWithShell")
+
 -- Ported box_contents (most of these are likely not used)
 set_exclamation_box_contents({
     { id = 0,  unused = 0, firstByte = 0, model = E_MODEL_MARIOS_WING_CAP,         behavior = id_bhvWingCap },
@@ -23,7 +31,7 @@ set_exclamation_box_contents({
     { id = 20, unused = 0, firstByte = 0, model = E_MODEL_RED_COIN,                behavior = id_bhvRedCoin },
     { id = 21, unused = 0, firstByte = 0, model = E_MODEL_BLUE_COIN,               behavior = id_bhvMovingBlueCoin },
     { id = 22, unused = 0, firstByte = 0, model = E_MODEL_PIRANHA_PLANT,           behavior = id_bhvPiranhaPlant },
-    { id = 23, unused = 0, firstByte = 0, model = E_MODEL_KOOPA_WITH_SHELL,        behavior = id_bhvKoopa },
+    { id = 23, unused = 0, firstByte = 0, model = 0,                               behavior = id_bhvKoopaWithShell },
     { id = 24, unused = 0, firstByte = 0, model = E_MODEL_WHOMP,                   behavior = id_bhvWhompKingBoss },
     { id = 25, unused = 0, firstByte = 5, model = E_MODEL_KING_BOBOMB,             behavior = id_bhvKingBobomb },
     { id = 26, unused = 0, firstByte = 0, model = E_MODEL_BOWLING_BALL,            behavior = id_bhvFireSpitter },
