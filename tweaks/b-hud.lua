@@ -26,7 +26,7 @@ local set_cam_angle = set_cam_angle
 -- Hud --
 ---------
 
-local CUSTOM_HUD = true                     -- Toggle on/off the HUD with "/custom-hud". On by default
+local CUSTOM_HUD = false                     -- Toggle on/off the HUD with "/custom-hud". On by default
 
 local charSelectOn = false                  -- Checks for Character Select
 hook_event(HOOK_ON_MODS_LOADED, function(m)
