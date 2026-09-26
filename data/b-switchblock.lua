@@ -99,22 +99,22 @@ local function network_send_on_same_level(packetType, data)
     end
 end
 
-local function on_packet_receive(p)
-    if p.type == PACKET_TYPE_SWITCH then
-        CURR_SWITCH_STATE = p.data -- sync the switch state
+-- local function on_packet_receive(p)
+--     if p.type == PACKET_TYPE_SWITCH then
+--         CURR_SWITCH_STATE = p.data -- sync the switch state
 
-    elseif p.type == PACKET_TYPE_SWITCH_REQUEST then
-        local requesterGlobalIndex = p.data
-        local requesterLocalIndex = network_local_index_from_global(requesterGlobalIndex)
+--     elseif p.type == PACKET_TYPE_SWITCH_REQUEST then
+--         local requesterGlobalIndex = p.data
+--         local requesterLocalIndex = network_local_index_from_global(requesterGlobalIndex)
 
-        -- send the packet to the player who requested it
-        if requesterLocalIndex ~= nil and requesterLocalIndex >= 0 then
-            network_send_to(requesterLocalIndex, true, { type = PACKET_TYPE_SWITCH, data = CURR_SWITCH_STATE })
-        end
-    end
-end
+--         -- send the packet to the player who requested it
+--         if requesterLocalIndex ~= nil and requesterLocalIndex >= 0 then
+--             network_send_to(requesterLocalIndex, true, { type = PACKET_TYPE_SWITCH, data = CURR_SWITCH_STATE })
+--         end
+--     end
+-- end
 
-hook_event(HOOK_ON_PACKET_RECEIVE, on_packet_receive)
+-- hook_event(HOOK_ON_PACKET_RECEIVE, on_packet_receive)
 
 -----------
 -- Setup --
