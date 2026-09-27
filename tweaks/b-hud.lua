@@ -317,26 +317,26 @@ end
 hook_event(HOOK_ON_HUD_RENDER_BEHIND, on_hud_render_behind)
 
 -- Chat commands
-hook_chat_command("custom-hud", "to toggle between custom and vanilla HUDs, /custom-hud [hide/show] to hide or show the HUD altogether",
-function (msg)
-    local m = gMarioStates[0]
-    play_sound(SOUND_MENU_CLICK_FILE_SELECT, m.pos)
+-- hook_chat_command("custom-hud", "to toggle between custom and vanilla HUDs, /custom-hud [hide/show] to hide or show the HUD altogether",
+-- function (msg)
+--     local m = gMarioStates[0]
+--     play_sound(SOUND_MENU_CLICK_FILE_SELECT, m.pos)
 
-    if msg == "hide" then
-        CUSTOM_HUD = false
-        hud_hide()
+--     if msg == "hide" then
+--         CUSTOM_HUD = false
+--         hud_hide()
 
-    elseif msg == "unhide" or msg == "show" then
-        CUSTOM_HUD = true
+--     elseif msg == "unhide" or msg == "show" then
+--         CUSTOM_HUD = true
 
-    elseif msg == "base" or msg == "vanilla" or msg == "off" then
-        CUSTOM_HUD = false
-        hud_show()
-    else
-        CUSTOM_HUD = not CUSTOM_HUD
-        if not CUSTOM_HUD then
-            hud_show()
-        end
-    end
-    return true
-end)
+--     elseif msg == "base" or msg == "vanilla" or msg == "off" then
+--         CUSTOM_HUD = false
+--         hud_show()
+--     else
+--         CUSTOM_HUD = not CUSTOM_HUD
+--         if not CUSTOM_HUD then
+--             hud_show()
+--         end
+--     end
+--     return true
+-- end)
