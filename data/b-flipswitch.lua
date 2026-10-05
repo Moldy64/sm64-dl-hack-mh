@@ -61,9 +61,9 @@ local function bhv_flipswitch_panel_loop(o)
         end
     end
 
-    if oldState ~= o.oAnimState then
-        network_send_object(o, true)
-    end
+    -- if oldState ~= o.oAnimState then
+    --     network_send_object(o, true)
+    -- end
 end
 
 local id_bhvFlipswitch_Panel_MOP = hook_behavior(nil, OBJ_LIST_SURFACE, false, bhv_flipswitch_panel_init, bhv_flipswitch_panel_loop, "bhvFlipswitch_Panel_MOP")
